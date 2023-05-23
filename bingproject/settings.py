@@ -1,3 +1,5 @@
+import dj_database_url
+import os
 INSTALLED_APPS = [
     # other apps
     'bingapp',
@@ -37,17 +39,20 @@ TEMPLATES = [
 STATIC_URL = '/static/'
 SECRET_KEY = 'fr_m*t!f#kgqks0k@bdggb-9%^cbr!*@+-q2m&$+g84x0p814m'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
+#DATABASES = {
+ #   'default': {
+ #       'ENGINE': 'django.db.backends.sqlite3',
+  #      'NAME': 'db.sqlite3',
+ #       'USER': '',
+ #       'PASSWORD': '',
+ #       'HOST': '',
+  #      'PORT': '',
+  #  }
+#}
+os.environ['DATABASE_URL']='postgres://botdb_d97h_user:oKU64c7jPkwVkqULssNdbphwVoMziUCS@dpg-chm3psg2qv27ib3rj31g-a.singapore-postgres.render.com/botdb_d97h'
+DATABASES= {
+    'default':dj_database_url.config()
 }
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 DEBUG = True
 ROOT_URLCONF = 'bingproject.urls'
