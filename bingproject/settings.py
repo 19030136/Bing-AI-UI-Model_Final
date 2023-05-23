@@ -39,7 +39,7 @@ TEMPLATES = [
 ]
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join('BINGPROJECT/', 'static')  # Set the static root directory
+STATIC_ROOT = os.path.join('Bing-AI-UI-Model_Final/', 'static')  # Set the static root directory
 
 SECRET_KEY = 'fr_m*t!f#kgqks0k@bdggb-9%^cbr!*@+-q2m&$+g84x0p814m'
 
