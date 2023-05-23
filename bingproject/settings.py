@@ -37,6 +37,7 @@ TEMPLATES = [
 ]
 
 STATIC_URL = '/static/'
+STATIC_ROOT='/bingapp/'
 SECRET_KEY = 'fr_m*t!f#kgqks0k@bdggb-9%^cbr!*@+-q2m&$+g84x0p814m'
 
 #DATABASES = {
