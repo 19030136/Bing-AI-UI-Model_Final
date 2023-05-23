@@ -10,7 +10,7 @@ from asgiref.sync import sync_to_async
 loop = asyncio.get_event_loop()
 
 async def chat_with_bing(user_input):
-    bot = Chatbot(cookie_path='bingapp\cookies.json')
+    bot = Chatbot(cookie_path='bingapp/cookies.json')
     response = await bot.ask(prompt=user_input, conversation_style=ConversationStyle.creative)
 
     # Extract the bot's response from the conversation
